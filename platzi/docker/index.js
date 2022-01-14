@@ -5,6 +5,8 @@ const port = 3000
 const MongoClient = require('mongodb').MongoClient
 
 // Connection URL
+//Al contenedor se le paso la variable de entorno MONGO_URL 
+//Esta app admite una variable de entorno o la conexión definida en texto
 const mongoUrl = process.env.MONGO_URL || 'mongodb://localhost:27017/test';
 
 app.get('/', (req, res) => {
