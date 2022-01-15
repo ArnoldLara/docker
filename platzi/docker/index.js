@@ -12,9 +12,9 @@ const mongoUrl = process.env.MONGO_URL || 'mongodb://localhost:27017/test';
 app.get('/', (req, res) => {
   MongoClient.connect(mongoUrl, { useNewUrlParser: true }, (err, db) => {
     if (err) {
-      res.status(500).send('💥 BOOM 💥: ' + err);
+      res.status(500).send('💥 KABOOM 💥: ' + err);
     } else {
-      res.send('Me conecté a la DB! 😎');
+      res.send('Me conecté a la Base de Datos! 😎');
       db.close();
     }
   });
